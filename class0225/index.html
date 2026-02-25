@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern and elegant Todo App built with HTML, CSS, and JavaScript. Manage your daily tasks with ease.">
+    <title>GlowTask | Premium Todo App</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <main class="app-container" id="app">
+        <header>
+            <h1 id="main-title">GlowTask</h1>
+            <p class="subtitle">Stay focused, be productive</p>
+        </header>
+
+        <section class="input-section">
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="새로운 할 일을 입력하세요..." autocomplete="off">
+                <button type="submit" id="add-btn" aria-label="Add Task">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </form>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all" id="filter-all">전체</button>
+                <button class="filter-btn" data-filter="active" id="filter-active">할 일</button>
+                <button class="filter-btn" data-filter="completed" id="filter-completed">완료</button>
+            </div>
+            <div class="stats">
+                <span id="items-left">0 items left</span>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <ul id="todo-list">
+                <!-- Todos will be injected here -->
+            </ul>
+        </section>
+
+        <footer class="app-footer">
+            <button id="clear-completed" class="clear-btn">완료 항목 삭제</button>
+        </footer >
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
